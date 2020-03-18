@@ -30,3 +30,26 @@ function sort(container) {
          container.appendChild(child)
      })
     }
+
+// Mobile Support
+
+const containerFirst = document.querySelector('.first')
+const containerSecond = document.querySelector('.second')
+
+draggables.forEach(draggable => {
+    draggable.addEventListener('touchstart', () => {
+        draggable.classList.add('dragging')
+    })
+});
+draggables.forEach(draggable => {
+    draggable.addEventListener('touchend', () => {
+        draggable.classList.remove('dragging')
+        if (draggable.parentElement.classList.contains('first')) {
+            containerSecond.appendChild(draggable)
+            sort(containerSecond)
+        } else {
+            containerFirst.appendChild(draggable)
+            sort(containerFirst)
+        }
+    })
+});
