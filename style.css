@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background: linear-gradient(to right,#00AAFF, #00FF6C);
+
+}
+
+.container {
+    background-color: coral;
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.draggable {
+    background-color: cornsilk;
+    padding: 1rem;
+    border: 3px solid black;
+    cursor: move;
+}
+
+.dragging {
+    opacity: .5;
+}
